@@ -31,8 +31,8 @@ public class Aly_p3 {
 	           max=sum[i];
 	           maxI=i;
 	       }
-	       if(min>sum[0]){
-	           min=sum[0];
+	       if(min>sum[i]){
+	           min=sum[i];
 	           minI=i;
 	       }
 	   }

@@ -5,12 +5,14 @@ public class Aly_p1 {
 	{
 	Scanner sc=new Scanner(System.in);
 	System.out.print("Enter a 4 digit Number : ");
+
 	int N=Integer.parseInt(sc.nextLine());
-	int M[]=new int[4];
+
+	int M[] = new int[4];
 	for(int i=0; i<4; i++)
 	{
-	M[3-i]=N%10;
-	N= N/10;
+	M[3-i]= N % 10;
+	N = N/10;
 	}
 	Print(M);
 	System.out.println("Encrypted Data is :");
@@ -20,17 +22,17 @@ public class Aly_p1 {
 	sc.close();
 	
 	}
-	public static int []Encrypt(int M[])
+	public static int [] Encrypt(int M[])
 	{
 	int n=M.length;
-	int N[]=new int[M.length];
-	for(int i=0; i<M.length; i++)
+	int N[]=new int[M.length]; // making copy of lenght
+	for(int i=0; i<M.length; i++)// making copy of values
 	{
-	N[i]=M[i];
+		N[i]=M[i];
 	}
 	for(int i=0; i<n; i++)
 	{
-	N[i]=(N[i]+7)%10;
+		N[i]=(N[i]+7)%10;
 	}
 	//reversing 1st with 3rd didgit
 	int temp;
@@ -43,7 +45,7 @@ public class Aly_p1 {
 	N[3]=temp;
 	return N;
 	}
-	public static int []Decrypt(int M[])
+	public static int [] Decrypt(int M[])
 	{
 	int N[]=new int[M.length];
 	for(int i=0; i<M.length; i++)
